@@ -4,7 +4,7 @@ import brush from "./p5.brush";
 
 const sketch = (p) => {
   p.preload = () => {
-    brush.preload();
+    // brush.preload();
     brush.config({
       R: () => $fx.rand(),
     });
@@ -12,7 +12,7 @@ const sketch = (p) => {
 
   p.setup = () => {
     let fxseed = $fx.rand() * 10420;
-    let canvas = p.createCanvas(1600, 1600);
+    let canvas = p.createCanvas(1600, 1600, p.P2D);
     p.randomSeed(fxseed);
     p.noiseSeed(fxseed);
     p.pixelDensity(1);
@@ -22,6 +22,7 @@ const sketch = (p) => {
 
   p.draw = () => {
     p.stroke(255);
+    p.translate(p.width / 2, p.height / 2);
     brush.strokeWeight(1);
     brush.stroke("white");
     brush.beginStroke("curve", p.width * p.random(0.1, 0.9), p.height * p.random(0.1, 0.9));
