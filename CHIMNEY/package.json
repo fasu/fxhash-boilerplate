@@ -1,0 +1,24 @@
+{
+  "name": "CHIMNEY",
+  "version": "1.0.0",
+  "description": "A generative artwork",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "fxhash update",
+    "update": "fxhash update",
+    "start": "fxhash dev",
+    "build": "fxhash build",
+    "transpile": "webpack --config webpack.config.dev.js",
+    "dev": "npm run transpile && npx fxhash dev"
+  },
+  "devDependencies": {
+    "@types/p5": "1.3.2",
+    "fxhash": "latest",
+    "ts-loader": "9.2.6",
+    "typescript": "^5.3.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "p5": "1.4.0"
+  }
+}

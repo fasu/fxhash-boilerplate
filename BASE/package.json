@@ -1,0 +1,26 @@
+{
+  "name": "BASE",
+  "version": "1.0.0",
+  "description": "A generative artwork",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "fxhash update",
+    "update": "fxhash update",
+    "start-webpack": "webpack --config webpack.config.dev.js --watch",
+    "start-dev": "fxhash start",
+    "start": "webpack --config webpack.config.dev.js --watch && fxhash start",
+    "build": "fxhash build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@types/p5": "^1.7.6",
+    "babel-loader": "^9.1.3",
+    "core-js": "^3.34.0",
+    "fxhash": "^0.0.9",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "p5": "1.7.0"
+  }
+}
