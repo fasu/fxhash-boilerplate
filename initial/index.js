@@ -89,14 +89,3 @@ $fx.features({
   "A random string": ["A", "B", "C", "D"].at(Math.floor($fx.rand() * 4)),
   "Feature from params, its a number": $fx.getParam("number_id"),
 });
-
-$fx.on(
-  "params:update",
-  (newRawValues) => {
-    // opt-out default behaviour
-    if (newRawValues.number_id === 5) return false;
-    // opt-in default behaviour
-    return true;
-  },
-  (optInDefault, newValues) => main()
-);
